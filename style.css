@@ -6,6 +6,7 @@ html, body, ul, li{
 body{
     background: url(background.png);
     overflow: hidden;
+    min-width: 1920px;
 }
 
 li{
@@ -224,4 +225,8 @@ li.active{
     position: absolute;
     bottom: -50px;
     background: url(tree.png) no-repeat center;
+}
+
+canvas{
+    display: block;
 }
