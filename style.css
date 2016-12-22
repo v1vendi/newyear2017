@@ -49,8 +49,9 @@ header li span{
 
 header .red, 
 header .red:hover{
-    left:849px;
-    top: -316px;
+    left:900px;
+    top: -260px;
+    animation: none;
 }
 header .red .ball,
 header .red:hover .ball{
@@ -76,8 +77,8 @@ header .gov_team span{
 }
 
 header .c_kiss{
-    top: -250px;
-    left: 330px;
+    left: 1176px;
+    top: -210px;
 }
 header .c_kiss .ball{
     transform: scale(1.2);
@@ -99,8 +100,8 @@ header .haiku .ball{
 }
 
 header .ctech{
-    left: 1176px;
-    top: -210px;
+    top: -250px;
+    left: 330px;
 }
 header .ctech span{
     bottom: 40px;
@@ -162,25 +163,21 @@ li.active{
 .logo_container{
     perspective: 60px;
     position: absolute;
-    bottom: -20px;
+    bottom: -80px;
     left: calc(50% - 275px);
 }
 /*550x250px*/
 #logo{
     animation: appear_and_drop 4s;
-    transform: rotateX(30deg) scale(1.2);
     transform-origin: bottom;
 }
 
 @keyframes appear_and_drop{
     from{
-        transform: scale(0) rotateX(0);
-    }
-    75%{
-        transform: scale(1.2) rotateX(1deg);
+        transform: scale(0);
     }
     to{
-        transform: scale(1.2) rotateX(30deg);
+        transform: scale(1);
     }
 }
 
@@ -204,12 +201,13 @@ li.active{
 
 #greetings li{
     position: absolute;
-    bottom: 100px;
+    bottom: 40px;
     width: 1000px;
-    height: 460px;
+    height: 400px;
     box-sizing: border-box;
-    padding: 40px 170px 0 240px;
+    padding: 10px 170px 0 240px;
     background: url(tree-small.png) no-repeat right 40px top 25px, url(scroll.png) no-repeat center;
+    background-size: contain;
     color: white;
     left: 500px;
     font-size: 1.4em;
