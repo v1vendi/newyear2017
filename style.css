@@ -206,8 +206,6 @@ li.active{
 }
 
 #photos{
-    position: absolute;
-    top: 300px;
     width: 100%;
     margin: 0 auto;
 }
@@ -228,8 +226,6 @@ li.active{
     /*background: url(scroll_tree.png) center center no-repeat;*/
     color: white;
     font-size: 1.4em;
-
-    transform: translate(-50%, 0);
 }
 
 #greetings h2{
@@ -249,10 +245,6 @@ canvas{
 }
 
 @media (max-height: 900px) {
-    #photos {
-        top: 300px;
-        bottom: calc(0% + 300px);
-    }
 
     #greetings li {
         bottom: 0;
