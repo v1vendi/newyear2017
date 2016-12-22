@@ -77,11 +77,14 @@ header li.active .ball{
 header .gov_team{
     left: 150px;
     left: 10%;
-    top: -320px;
+    top: -250px;
 }
 
 header .gov_team span{
-    bottom: 30px;
+    bottom: 75px;
+}
+header .gov_team .ball{
+    transform: scale(0.7);
 }
 
 header .ctech{
@@ -90,10 +93,10 @@ header .ctech{
     left: 20%;
 }
 header .ctech span{
-    bottom: 40px;
+    bottom: 55px;
 }
 header .ctech .ball{
-    transform: scale(0.9);
+    transform: scale(0.8);
 }
 
 header .qa{
@@ -102,7 +105,10 @@ header .qa{
     top: -210px;
 }
 header .qa span{
-    bottom: 40px;
+    bottom: 65px;
+}
+header .qa .ball{
+    transform: scale(0.75);
 }
 
 header .haiku{
@@ -111,10 +117,10 @@ header .haiku{
     left: 60%;
 }
 header .haiku span{
-    bottom: 60px;
+    bottom: 70px;
 }
 header .haiku .ball{
-    transform: scale(0.8);
+    transform: scale(0.75);
 }
 
 header .sparta{
@@ -123,10 +129,10 @@ header .sparta{
     top: -240px;
 }
 header .sparta span{
-    bottom: 70px;
+    bottom: 55px;
 }
 header .sparta .ball{
-    transform: scale(0.75);
+    transform: scale(0.85);
 }
 
 header .c_kiss{
@@ -135,10 +141,10 @@ header .c_kiss{
     top: -210px;
 }
 header .c_kiss .ball{
-    transform: scale(1.2);
+    transform: scale(0.75);
 }
 header .c_kiss span{
-    bottom: -20px;
+    bottom: 65px;
 }
 
 #photos li, #greetings li{
@@ -201,7 +207,7 @@ li.active{
 
 #photos{
     position: absolute;
-    top: 0;
+    top: 300px;
     width: 100%;
     margin: 0 auto;
 }
@@ -212,8 +218,7 @@ li.active{
 }
 
 #greetings li{
-    position: absolute;
-    bottom: 40px;
+    margin: 0 auto;
     width: 1000px;
     height: 400px;
     box-sizing: border-box;
@@ -222,10 +227,8 @@ li.active{
     background: url(scroll_tree.png) center center / contain no-repeat;
     /*background: url(scroll_tree.png) center center no-repeat;*/
     color: white;
-    left: 500px;
     font-size: 1.4em;
 
-    left: 50%;
     transform: translate(-50%, 0);
 }
 
@@ -247,7 +250,7 @@ canvas{
 
 @media (max-height: 900px) {
     #photos {
-        top: initial;
+        top: 300px;
         bottom: calc(0% + 300px);
     }
 

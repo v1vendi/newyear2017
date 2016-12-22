@@ -16,6 +16,9 @@ function attachEvents(element){
 
 function handleClick(){
     document.getElementById('greetings').classList.add('active');
+	document.getElementById('greetings_logo').style.display = "none";
+	//document.getElementsByClassName('red').style.display = "none";
+
     var elementClass = this.className;
 
     var listElements = document.querySelectorAll('li');
@@ -72,7 +75,7 @@ function snow(){
 	var angle = 0;
 	function update()
 	{
-		angle += 0.01;
+		angle += 0.1;
 		for(var i = 0; i < mp; i++)
 		{
 			var p = particles[i];
