@@ -1,4 +1,4 @@
-html, body {
+html {
     height:100%;
 }
 
@@ -15,7 +15,6 @@ body{
     /*background-repeat: no-repeat;*/
     /*background-position: center;*/
     background: url(background.png) center center / cover no-repeat;
-    height:100%;
 }
 
 li{
@@ -156,8 +155,8 @@ header .c_kiss span{
     display: none;
 }
 
-li.active{
-    display: block !important;
+#photos li.active, #greetings li.active {
+    display: block;
 }
 
 @keyframes pendulum {
@@ -267,4 +266,54 @@ canvas{
 
 .c_kiss p b {
     font-size: 120%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    html {
+        height: auto;
+    }
+
+    body {
+        background: url(background.png) 0% 0% / auto no-repeat;
+    }
+
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+
+    #photos li.active.desktop, #greetings li.active.desktop {
+        display: none;
+    }
+
+    #photos li.active.mobile, #greetings li.active.mobile {
+        display: block;
+    }
+
+    #greetings:not(.active) {
+        top: -250px;
+        bottom: 0px;
+    }
+    
+}
+
+@media only screen and (min-width: 1000px) {
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+
+    #photos li.active.desktop, #greetings li.active.desktop {
+        display: block;
+    }
+
+    #photos li.active.mobile, #greetings li.active.mobile {
+        display: none;
+    }
 }
