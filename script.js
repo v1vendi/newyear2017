@@ -7,6 +7,9 @@ function initTabs(){
 }
 
 function attachEvents(element){
+    if(element.classList.contains('red')){
+        return;
+    }
     element.addEventListener('click', handleClick);
 }
 
