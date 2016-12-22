@@ -14,6 +14,7 @@ function attachEvents(element){
 }
 
 function handleClick(){
+    document.getElementById('greetings').classList.add('active');
     var elementClass = this.className;
 
     var listElements = document.querySelectorAll('li');
