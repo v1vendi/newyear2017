@@ -4,9 +4,13 @@ html, body, ul, li{
 }
 
 body{
-    background: url(background.png);
+    /*background: url(background.png);*/
     overflow: hidden;
     min-width: 1920px;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    background: url(background.png) center center / cover no-repeat;
 }
 
 li{
@@ -15,15 +19,16 @@ li{
 
 header ul{
     display: flex;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 10;
     font-size: 1.3em;
 }
 
 header li{
+    position: absolute;
+    z-index: 20;
     width: 140px;
     height: 500px;
-    position: absolute;
     text-align: center;
     transform-origin: center -100px;
     color: grey;
@@ -49,9 +54,11 @@ header li span{
 
 header .red, 
 header .red:hover{
-    left:900px;
     top: -260px;
     animation: none;
+    left: 849px;
+    left: 50%;
+    margin: 0 0 0 -70px;
 }
 header .red .ball,
 header .red:hover .ball{
@@ -69,6 +76,7 @@ header li.active .ball{
 
 header .gov_team{
     left: 150px;
+    left: 10%;
     top: -320px;
 }
 
@@ -77,8 +85,9 @@ header .gov_team span{
 }
 
 header .c_kiss{
-    left: 1176px;
     top: -210px;
+    left: 330px;
+    left: 20%;
 }
 header .c_kiss .ball{
     transform: scale(1.2);
@@ -90,6 +99,7 @@ header .c_kiss span{
 
 header .haiku{
     left: 580px;
+    left: 30%;
     top: -210px;
 }
 header .haiku span{
@@ -100,8 +110,9 @@ header .haiku .ball{
 }
 
 header .ctech{
-    top: -250px;
-    left: 330px;
+    top: -210px;
+    left: 1176px;
+    left: 60%;
 }
 header .ctech span{
     bottom: 40px;
@@ -112,6 +123,7 @@ header .ctech .ball{
 
 header .qa{
     left: 1465px;
+    left: 70%;
     top: -240px;
 }
 header .qa span{
@@ -120,6 +132,7 @@ header .qa span{
 
 header .sparta{
     left: 1700px;
+    left: 80%;
     top: -210px;
 }
 header .sparta span{
@@ -205,12 +218,16 @@ li.active{
     width: 1000px;
     height: 400px;
     box-sizing: border-box;
-    padding: 10px 170px 0 240px;
-    background: url(tree-small.png) no-repeat right 40px top 25px, url(scroll.png) no-repeat center;
-    background-size: contain;
+    padding: 40px 170px 0 240px;
+    /*background: url(tree-small.png) no-repeat right 40px top 25px, url(scroll.png) no-repeat center;*/
+    background: url(scroll_tree.png) center center / contain no-repeat;
+    /*background: url(scroll_tree.png) center center no-repeat;*/
     color: white;
     left: 500px;
     font-size: 1.4em;
+
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 #greetings h2{
@@ -227,4 +244,23 @@ li.active{
 
 canvas{
     display: block;
+}
+
+@media (max-height: 900px) {
+    #photos {
+        top: initial;
+        bottom: calc(0% + 300px);
+    }
+
+    #greetings li {
+        bottom: 0;
+        width: 640px;
+        height: 300px;
+        padding: 30px 117px 0 114px;
+        font-size: 16px;
+    }
+
+    header .red {
+        top: -365px
+    }
 }
