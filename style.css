@@ -8,7 +8,7 @@ html, body, ul, li{
 }
 
 body{
-    background: url(background.png) center center / cover no-repeat;
+    background: #9e9e9e url(background.png) center -140px no-repeat;
     min-height: 100%;
     padding-bottom: 120px;
     box-sizing: border-box;
@@ -177,8 +177,8 @@ header .c_kiss .ball{
 
 #greetings_logo{
     position: absolute;
-    top: 20px;
-    left: calc(50% - 175px);
+    top: -200px;
+    left: calc(50% - 280px);
 }
 
 #photos{
@@ -259,7 +259,7 @@ header .c_kiss .ball{
 }
 #greetings footer{
     position: absolute;
-    bottom: -60px;
+    bottom: -70px;
     z-index: 2;
     left: 80px;
 }
@@ -291,8 +291,4 @@ canvas{
    header ul{
        height: 270px;
    }
-}
-
-@media only screen and (min-width: 1000px) {
-
 }
