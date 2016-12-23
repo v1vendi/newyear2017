@@ -2,19 +2,17 @@ html {
     height:100%;
 }
 
-
 html, body, ul, li{
     margin: 0;
     padding: 0;
 }
 
 body{
-    /*background: url(background.png);*/
-    overflow: hidden;
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center;*/
     background: url(background.png) center center / cover no-repeat;
+    min-height: 100%;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 li{
@@ -22,21 +20,19 @@ li{
 }
 
 header ul{
-    display: flex;
-    /*position: absolute;*/
-    z-index: 10;
     font-size: 1.3em;
+    height: 200px;
 }
 
 header li{
     position: absolute;
     z-index: 20;
     width: 140px;
-    height: 500px;
+    height: 400px;
     text-align: center;
     transform-origin: center -100px;
     color: grey;
-    animation: pendulum 4s infinite;
+    /*animation: pendulum 4s infinite;*/
 }
 
 header li .ball{
@@ -44,6 +40,7 @@ header li .ball{
     width: 100%;
     height: 100%;
     background: url(ball/silver.png) no-repeat bottom;
+    transform-origin: bottom;
 
 }
 
@@ -84,9 +81,6 @@ header .gov_team{
     top: -250px;
 }
 
-header .gov_team span{
-    bottom: 75px;
-}
 header .gov_team .ball{
     transform: scale(0.7);
 }
@@ -95,9 +89,6 @@ header .ctech{
     top: -210px;
     left: 330px;
     left: 20%;
-}
-header .ctech span{
-    bottom: 55px;
 }
 header .ctech .ball{
     transform: scale(0.8);
@@ -108,9 +99,6 @@ header .qa{
     left: 30%;
     top: -210px;
 }
-header .qa span{
-    bottom: 65px;
-}
 header .qa .ball{
     transform: scale(0.75);
 }
@@ -120,9 +108,6 @@ header .haiku{
     left: 1176px;
     left: 60%;
 }
-header .haiku span{
-    bottom: 70px;
-}
 header .haiku .ball{
     transform: scale(0.75);
 }
@@ -131,9 +116,6 @@ header .sparta{
     left: 1465px;
     left: 70%;
     top: -240px;
-}
-header .sparta span{
-    bottom: 55px;
 }
 header .sparta .ball{
     transform: scale(0.85);
@@ -147,17 +129,7 @@ header .c_kiss{
 header .c_kiss .ball{
     transform: scale(0.75);
 }
-header .c_kiss span{
-    bottom: 65px;
-}
 
-#photos li, #greetings li{
-    display: none;
-}
-
-#photos li.active, #greetings li.active {
-    display: block;
-}
 
 @keyframes pendulum {
     from {
@@ -183,15 +155,15 @@ header .c_kiss span{
 
 
 .logo_container{
-    perspective: 60px;
     position: absolute;
-    bottom: -80px;
-    left: calc(50% - 275px);
+    bottom: 0;
+    width: 100%;
 }
-/*550x250px*/
 #logo{
     animation: appear_and_drop 4s;
     transform-origin: bottom;
+    display: block;
+    margin: 0 auto; 
 }
 
 @keyframes appear_and_drop{
@@ -214,34 +186,96 @@ header .c_kiss span{
     margin: 0 auto;
 }
 
-#photos img{
-    margin: auto;
-    display: block;
+
+#photos li, #greetings li{
+    display: none;
+    max-width: 100%;
+}
+
+#photos li img{
+    max-width: 100%;
+    flex-grow: 0;
+}
+
+#photos li.active, #greetings li.active {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#greetings{
+    padding: 20px;
 }
 
 #greetings li{
-    margin: 0 auto;
-    width: 1000px;
-    height: 400px;
+    margin: 150px auto; 
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
     box-sizing: border-box;
-    padding: 40px 170px 0 240px;
-    /*background: url(tree-small.png) no-repeat right 40px top 25px, url(scroll.png) no-repeat center;*/
-    background: url(scroll_tree.png) center center / contain no-repeat;
-    /*background: url(scroll_tree.png) center center no-repeat;*/
+    padding: 0 80px;
+    background: url(scroll_body.png); 
+    background-size: contain;
     color: white;
     font-size: 1.4em;
 }
 
-#greetings h2{
-    text-align: center;
+#greetings li::before{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 150px;
+    top: -150px;
+    left: 0;
+    background: url(scroll_top.png) no-repeat bottom;
+    background-size: 100%;    
+    
+    position: absolute;
 }
 
-#greetings:not(.active){
+#greetings li::after{
+    display: block;
+    content: "";
+    width: 100%;
+    bottom: -139px;
+    left: 0;
+    height: 139px;
+    background: url(scroll_bottom.png) no-repeat;
+    background-size: 100% 139px;
+    
+    position: absolute;
+}
+
+#greetings h2{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: -60px;
+    margin: 0;
+}
+#greetings p{
+    margin: 0;
+}
+#greetings footer{
+    position: absolute;
+    bottom: -60px;
+    z-index: 2;
+    left: 80px;
+}
+
+
+.c_kiss p b {
+    font-size: 1.2em;
+}
+
+.canvas_container{
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    bottom: -50px;
-    background: url(tree.png) no-repeat center;
+    overflow: hidden;
 }
 
 canvas{
@@ -249,71 +283,16 @@ canvas{
     display: block;
 }
 
-@media (max-height: 900px) {
+@media only screen and (max-width: 1400px) {
+   header li{
+       height: 500px;
+   }
 
-    #greetings li {
-        bottom: 0;
-        width: 640px;
-        height: 300px;
-        padding: 30px 117px 0 114px;
-        font-size: 16px;
-    }
-
-    header .red {
-        top: -365px
-    }
-}
-
-.c_kiss p b {
-    font-size: 120%;
-}
-
-@media only screen and (max-width: 1000px) {
-
-    html {
-        height: auto;
-    }
-
-    body {
-        background: url(background.png) 0% 0% / auto no-repeat;
-    }
-
-    .desktop {
-        display: none;
-    }
-    .mobile {
-        display: block;
-    }
-
-
-    #photos li.active.desktop, #greetings li.active.desktop {
-        display: none;
-    }
-
-    #photos li.active.mobile, #greetings li.active.mobile {
-        display: block;
-    }
-
-    #greetings:not(.active) {
-        top: -250px;
-        bottom: 0px;
-    }
-    
+   header ul{
+       height: 270px;
+   }
 }
 
 @media only screen and (min-width: 1000px) {
-    .desktop {
-        display: block;
-    }
-    .mobile {
-        display: none;
-    }
 
-    #photos li.active.desktop, #greetings li.active.desktop {
-        display: block;
-    }
-
-    #photos li.active.mobile, #greetings li.active.mobile {
-        display: none;
-    }
 }

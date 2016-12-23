@@ -16,8 +16,6 @@ function attachEvents(element){
 
 function handleClick(){
     document.getElementById('greetings').classList.add('active');
-	document.getElementById('greetings_logo').style.display = "none";
-	//document.getElementsByClassName('red').style.display = "none";
 
     var elementClass = this.className;
 
@@ -33,8 +31,8 @@ function snow(){
 	var ctx = canvas.getContext("2d");
 	
 	//canvas dimensions
-	var W = window.innerWidth;
-	var H = window.innerHeight;
+	var W = document.body.offsetWidth;
+	var H = document.body.offsetHeight;
     canvas.width = W;
     canvas.height = H;
 	
