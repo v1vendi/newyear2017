@@ -10,7 +10,7 @@ html, body, ul, li{
 body{
     background: #9e9e9e url(background.png) center -140px no-repeat;
     min-height: 100%;
-    padding-bottom: 120px;
+    padding-bottom: 220px;
     box-sizing: border-box;
     position: relative;
 }
@@ -32,7 +32,7 @@ header li{
     text-align: center;
     transform-origin: center -100px;
     color: grey;
-    /*animation: pendulum 4s infinite;*/
+    cursor: pointer;
 }
 
 header li .ball{
@@ -49,8 +49,12 @@ header li span{
     bottom: 0;
     left: 0;
     width: 140px;
-    height: 60px;
+    height: 64px;
     text-align: center;
+}
+
+header .sparta span{
+    height: 72px;
 }
 
 header .red,
@@ -76,7 +80,7 @@ header li.active .ball{
 }
 
 header .gov_team{
-    left: 150px;
+    left: 100px;
     left: 10%;
     top: -250px;
 }
@@ -87,7 +91,7 @@ header .gov_team .ball{
 
 header .ctech{
     top: -210px;
-    left: 330px;
+    left: 280px;
     left: 20%;
 }
 header .ctech .ball{
@@ -95,12 +99,12 @@ header .ctech .ball{
 }
 
 header .qa{
-    left: 580px;
+    left: 530px;
     left: 30%;
-    top: -210px;
+    top: -230px;
 }
 header .qa .ball{
-    transform: scale(0.75);
+    transform: scale(0.70);
 }
 
 header .haiku{
@@ -179,6 +183,7 @@ header .c_kiss .ball{
     position: absolute;
     top: -200px;
     left: calc(50% - 280px);
+    z-index: 1;
 }
 
 #photos{
